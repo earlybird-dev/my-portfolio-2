@@ -1,0 +1,113 @@
+// ======= CUSTOM BOOTSTRAP =======
+// Custom colors
+$white: #fff;
+$black: #000000;
+
+$blue-1: #344d7c;
+$blue-2: #22558a;
+$blue-3: #0275b8;
+$blue-4: #0b9be3;
+$blue-5: #6cb4e9;
+$green-1: #4db538;
+$green-2: #477316;
+$green-3: #00a886;
+$red-1: #b23737;
+$grey-text-1: #545454;
+$grey-text-2: #bbb;
+$dark-blue-1: #0039a4;
+$lime-1: #36b100;
+$button-grey-1: #8998a6;
+$light-blue-2: #f7fcff;
+$light-blue-3: #e0f5ff;
+$med-blue-1: #b6d9f0;
+$lavender-1: #be6dcf;
+$golden-1: #ffd600;
+$jam-blue-1: #55c7de;
+
+// Import the functions and variables
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+
+// Add custom colors to Bootstrap
+$custom-theme-colors: (
+  "blue-1": $blue-1,
+  "blue-2": $blue-2,
+  "blue-3": $blue-3,
+  "blue-4": $blue-4,
+  "blue-5": $blue-5,
+  "green-1": $green-1,
+  "green-2": $green-2,
+  "green-3": $green-3,
+  "red-1": $red-1,
+  "grey-text-1": $grey-text-1,
+  "grey-text-2": $grey-text-2,
+  "dark-blue-1": $dark-blue-1,
+  "lime-1": $lime-1,
+  "button-grey-1": $button-grey-1,
+  "light-blue-2": $light-blue-2,
+  "light-blue-3": $light-blue-3,
+  "med-blue-1": $med-blue-1,
+  "lavender-1": $lavender-1,
+  "golden-1": $golden-1,
+  "jam-blue-1": $jam-blue-1,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// Import Bootstrap, Animate
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/animate.css/animate.css";
+
+// Import scss files
+@import "utilities";
+
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Paytone+One&display=swap");
+
+// $font-body: 'Gotham', sans-serif;
+$font-heading: "Paytone One", sans-serif;
+$font-body: "Outfit", sans-serif;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -moz-transition: all $transition ease;
+  -o-transition: all $transition ease;
+  -webkit-transition: all $transition ease;
+  -ms-transition: all $transition ease;
+  transition: all $transition ease;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: $font-heading;
+}
+
+body {
+  font-family: $font-body;
+}
