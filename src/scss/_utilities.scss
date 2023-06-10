@@ -1,0 +1,40 @@
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+#hero {
+  .title-card {
+    width: 400px;
+    min-height: 600px;
+    filter: drop-shadow(7px 5px 0px rgba(0, 0, 0, 1));
+  }
+
+  // .intro-title {
+  //   @include transition(0.5s);
+  //   transform: translate(128px, 18px);
+  // }
+
+  .intro-title {
+    @include transition(0.5s);
+    transform: translate(300px, 18px) rotate(-3deg) scale(0.8);
+    &.active {
+      transform: translate(300px, 18px) rotate(-3deg) scale(1);
+    }
+  }
+
+  .data-title {
+    @include transition(0.5s);
+    transform: rotate(3deg) scale(0.8);
+    &.active {
+      transform: rotate(3deg) scale(1);
+    }
+  }
+
+  .web-title {
+    @include transition(0.5s);
+    transform: translate(-300px, 36px) rotate(-3deg) scale(0.8);
+    &.active {
+      transform: translate(-300px, 36px) rotate(-3deg) scale(1);
+    }
+  }
+}
